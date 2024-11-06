@@ -1,7 +1,9 @@
-@import "./partials/reset" @import "./partials/colors";
+@import "./partials/reset";
+@import "./partials/colors";
 @import "./partials/spaziature";
 @import "./partials/button";
 @import "./partials/font";
+@import "./partials/mixins";
 
 body {
   font-family: $fontPrimary;
@@ -41,9 +43,7 @@ main {
   div {
     padding: $paddingDiv;
     h1 {
-      text-align: center;
-      font-size: $sizeTitle;
-      font-family: $fontSecondary;
+      @include title-big;
     }
     p {
       text-align: center;

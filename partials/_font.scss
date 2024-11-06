@@ -2,5 +2,12 @@ $fontPrimary: "Roboto", sans-serif;
 $fontSecondary: "Montserrat", sans-serif;
 
 $sizeTitle: 3rem;
+
 @mixin title-big {
+  font-size: 3rem;
+  font-weight: bold;
+  color: $colorText;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }

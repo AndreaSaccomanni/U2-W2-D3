@@ -1,0 +1,17 @@
+@mixin title-big() {
+  font-size: 6rem;
+  font-weight: bold;
+  color: $colorText;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-family: $fontSecondary;
+}
+
+@mixin button($color) {
+  border: 2px solid $color;
+  border-radius: 5px;
+  padding: 2px 5px;
+  background-color: lighten($color, 30%);
+  color: darken($color, 30%);
+}
