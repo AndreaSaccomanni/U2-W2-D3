@@ -1,0 +1,19 @@
+@mixin button($color) {
+  border: 2px solid $color;
+  border-radius: 5px;
+  padding: 2px 5px;
+  background-color: lighten($color, 30%);
+  color: darken($color, 30%);
+}
+
+$colors: (
+  blue: rgb(15, 107, 255),
+  orange: rgb(255, 135, 0),
+  green: rgb(76, 175, 80),
+);
+
+@each $key, $color in $colors {
+  .button--#{$key} {
+    @include button($color);
+  }
+}

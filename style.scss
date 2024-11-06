@@ -1,23 +1,23 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+@import "./partials/reset" @import "./partials/colors";
+@import "./partials/spaziature";
+@import "./partials/button";
+@import "./partials/font";
 
-$color: rgb(32, 107, 178);
 body {
+  font-family: $fontPrimary;
+
   margin: 0;
   header {
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 7rem;
+      padding: $paddingNavbar;
       width: 100%;
-      background-color: $color;
+      background-color: $backroundNavbar;
       a {
         text-decoration: none;
-        color: white;
+        color: $colorText;
         img {
           width: 80px;
           height: 80px;
@@ -26,10 +26,31 @@ body {
       ul {
         li {
           display: inline-block;
-          padding: 5px;
-          color: white;
+          padding: $paddingLi;
+          color: $colorText;
         }
       }
+    }
+  }
+}
+
+main {
+  display: flex;
+  background-color: $backroundMain;
+  color: $colorText;
+  div {
+    padding: $paddingDiv;
+    h1 {
+      text-align: center;
+      font-size: $sizeTitle;
+      font-family: $fontSecondary;
+    }
+    p {
+      text-align: center;
+    }
+    section {
+      text-align: center;
+      margin-top: $margin-topButton;
     }
   }
 }
