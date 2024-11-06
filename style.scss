@@ -54,3 +54,15 @@ main {
     }
   }
 }
+
+$image-width: 20%;
+.images {
+  display: flex;
+  justify-content: space-between;
+  gap: $gapImage;
+  img {
+    width: $image-width;
+    height: auto;
+    object-fit: cover;
+  }
+}
