@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -8,33 +9,79 @@ body {
   margin: 0;
 }
 
+/* _spaziature.scss */
+/* Responsive per il bottone hover */
+button {
+  /* Su schermi più piccoli */
+  /* Su schermi molto piccoli */
+}
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  button:hover {
+    transform: scale(1.05); /* Scala meno sui dispositivi più piccoli */
+  }
+}
+@media (max-width: 480px) {
+  button:hover {
+    transform: scale(1.03); /* Ancora meno sui dispositivi mobili */
+  }
+}
+
+/* Responsive per il layout di main */
+@media (max-width: 768px) {
+  main div {
+    width: 90%; /* Adattiamo la larghezza per schermi più piccoli */
+  }
+}
+@media (max-width: 480px) {
+  main div {
+    width: 100%; /* Adattiamo ancora di più sui dispositivi mobili */
+  }
+}
+/* Responsive per le immagini */
+@media (max-width: 768px) {
+  .images img {
+    width: 100%; /* Le immagini occupano il 100% della larghezza del contenitore */
+    max-width: 100%; /* Non più limitato a una larghezza fissa */
+  }
+}
+@media (max-width: 480px) {
+  .images img {
+    width: 100%; /* Le immagini occupano il 100% della larghezza del contenitore */
+    max-width: 100%; /* Non più limitato a una larghezza fissa */
+  }
+}
 .button--blue {
   border: 2px solid rgb(15, 107, 255);
   border-radius: 5px;
+  font-size: 1.5rem;
   padding: 2px 5px;
   background-color: #a8c9ff;
   color: #002d75;
+  transition: all 0.3s ease;
 }
 
 .button--orange {
   border: 2px solid rgb(255, 135, 0);
   border-radius: 5px;
+  font-size: 1.5rem;
   padding: 2px 5px;
   background-color: #ffcf99;
   color: #663600;
+  transition: all 0.3s ease;
 }
 
 .button--green {
   border: 2px solid rgb(76, 175, 80);
   border-radius: 5px;
+  font-size: 1.5rem;
   padding: 2px 5px;
   background-color: #b5dfb7;
   color: #1e441f;
-}
-
-button:hover {
-  cursor: pointer;
-  transform: scale 1.2;
+  transition: all 0.3s ease;
 }
 
 body {
@@ -98,6 +145,11 @@ main div img {
   border-radius: 5px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
   border: 2px solid lightgray;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .images {

@@ -16,3 +16,62 @@ $gapImage: 20px;
   margin-top: $margin-top;
   margin-bottom: $margin-bottom;
 }
+/* _spaziature.scss */
+
+/* Responsive per il bottone hover */
+button {
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  /* Su schermi più piccoli */
+  @media (max-width: 768px) {
+    &:hover {
+      transform: scale(1.05); /* Scala meno sui dispositivi più piccoli */
+    }
+  }
+
+  /* Su schermi molto piccoli */
+  @media (max-width: 480px) {
+    &:hover {
+      transform: scale(1.03); /* Ancora meno sui dispositivi mobili */
+    }
+  }
+}
+
+/* Responsive per il layout di main */
+@media (max-width: 768px) {
+  main {
+    div {
+      width: 90%; /* Adattiamo la larghezza per schermi più piccoli */
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    div {
+      width: 100%; /* Adattiamo ancora di più sui dispositivi mobili */
+    }
+  }
+}
+
+/* Responsive per le immagini */
+@media (max-width: 768px) {
+  .images {
+    img {
+      width: 100%; /* Le immagini occupano il 100% della larghezza del contenitore */
+      max-width: 100%; /* Non più limitato a una larghezza fissa */
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .images {
+    img {
+      width: 100%; /* Le immagini occupano il 100% della larghezza del contenitore */
+      max-width: 100%; /* Non più limitato a una larghezza fissa */
+    }
+  }
+}
