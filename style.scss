@@ -60,6 +60,7 @@ main {
       margin-top: $margin-topButton;
     }
     img {
+      max-width: 100%;
       height: auto;
       @include floating(5px, 4px 4px 10px rgba(0, 0, 0, 0.3), 2px solid lightgray);
     }
