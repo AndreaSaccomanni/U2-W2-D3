@@ -52,5 +52,22 @@ main {
       text-align: center;
       margin-top: $margin-topButton;
     }
+    img {
+      @include floating(5px, 4px 4px 10px rgba(0, 0, 0, 0.3), 2px solid lightgray);
+    }
+  }
+}
+
+$image-width: 20%;
+.images {
+  display: flex;
+  justify-content: space-between;
+  gap: $gapImage;
+  img {
+    @include floating(5px, 4px 4px 10px rgba(0, 0, 0, 0.5));
+    margin-top: $marginImg;
+    width: $image-width;
+    height: auto;
+    object-fit: cover;
   }
 }

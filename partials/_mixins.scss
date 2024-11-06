@@ -16,3 +16,9 @@ $colorText: #f4f4f4;
   background-color: lighten($color, 30%);
   color: darken($color, 30%);
 }
+
+@mixin floating($border-radius: 0, $boxShadow: 0, $border: 0) {
+  border-radius: $border-radius;
+  box-shadow: $boxShadow;
+  border: $border;
+}
