@@ -1,4 +1,5 @@
 $colorText: #f4f4f4;
+@import "./font";
 
 @mixin title-big() {
   font-size: 6rem;
@@ -10,6 +11,7 @@ $colorText: #f4f4f4;
 }
 
 @mixin button($color) {
+  font-size: $fontText;
   border: 2px solid $color;
   border-radius: 5px;
   padding: 2px 5px;

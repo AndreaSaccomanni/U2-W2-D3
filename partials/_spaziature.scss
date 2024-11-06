@@ -3,8 +3,16 @@ $paddingLi: 5px;
 $margin-topMain: 3rem;
 
 $marginImg: 20px;
+
 $paddingDiv: 20px;
 
 $margin-topButton: 3rem;
 
 $gapImage: 20px;
+
+@mixin margin($margin-left: 0, $margin-right: 0, $margin-top: 0, $margin-bottom: 0) {
+  margin-left: $margin-left;
+  margin-right: $margin-right;
+  margin-top: $margin-top;
+  margin-bottom: $margin-bottom;
+}

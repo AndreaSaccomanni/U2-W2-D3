@@ -20,6 +20,7 @@ body {
       a {
         text-decoration: none;
         color: $colorText;
+        font-size: $sizeText;
         img {
           width: 80px;
           height: 80px;
@@ -30,6 +31,7 @@ body {
           display: inline-block;
           padding: $paddingLi;
           color: $colorText;
+          font-size: $sizeText;
         }
       }
     }
@@ -37,13 +39,18 @@ body {
 }
 
 main {
+  width: 100%;
   display: flex;
+  justify-content: space-around;
   background-color: $backroundMain;
   color: $colorText;
+  font-size: $sizeText;
   div {
     padding: $paddingDiv;
+    max-width: 50%;
     h1 {
       @include title-big;
+      margin: 0;
     }
     p {
       text-align: center;
@@ -53,6 +60,7 @@ main {
       margin-top: $margin-topButton;
     }
     img {
+      height: auto;
       @include floating(5px, 4px 4px 10px rgba(0, 0, 0, 0.3), 2px solid lightgray);
     }
   }
@@ -64,8 +72,8 @@ $image-width: 20%;
   justify-content: space-between;
   gap: $gapImage;
   img {
-    @include floating(5px, 4px 4px 10px rgba(0, 0, 0, 0.5));
-    margin-top: $marginImg;
+    @include floating(5px, 0px 0px 10px 3px rgba(0, 0, 0, 0.5));
+    @include margin(20px, 20px, $margin-top: 20px);
     width: $image-width;
     height: auto;
     object-fit: cover;
