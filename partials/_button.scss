@@ -20,7 +20,6 @@ $colors: (
 }
 
 button:hover {
-  @include button();
   cursor: pointer;
   transform: scale (1.2);
 }
